@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram | Demo</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #262626;
+}
+
+.contenedor {
+    width: 350px;
+    text-align: center;
+}
+
+.login {
+    background: white;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+}
+
+.logo {
+    font-family: cursive;
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 9px;
+    margin-bottom: 7px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    background: #0095f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1877f2;
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #737373;
+    font-size: 12px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+    height: 1px;
+    background: #dbdbdb;
+    flex: 1;
+}
+
+.facebook {
+    color: #385185;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.olvidaste {
+    display: block;
+    font-size: 12px;
+    margin-top: 22px;
+    color: #00376b;
+    text-decoration: none;
+}
+
+.registro {
+    background: white;
+    border: 1px solid #dbdbdb;
+    margin-top: 10px;
+    padding: 25px 10px;
+    font-size: 14px;
+}
+
+.registro a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.aviso {
+    margin-top: 18px;
+    color: #737373;
+    font-size: 12px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+    <div class="login">
+        <div class="logo">Instagram</div>
+
+        <form onsubmit="event.preventDefault(); 
+            document.getElementById('mensaje').textContent =
+            'Demostración: no se enviaron datos.';">
+            <input type="text"
+                   placeholder="Teléfono, usuario o correo"
+                   autocomplete="off" required>
+
+            <input type="password"
+                   placeholder="Contraseña"
+                   autocomplete="new-password" required>
+
+            <button type="submit">Iniciar sesión</button>
+        </form>
+
+        <p id="mensaje" class="aviso"></p>
+
+        <div class="separador">O</div>
+
+        <div class="facebook">ⓕ Iniciar sesión con Facebook</div>
+
+        <a href="#" class="olvidaste">¿Olvidaste tu contraseña?</a>
+    </div>
+
+    <div class="registro">
+        ¿No tienes una cuenta?
+        <a href="#">Regístrate</a>
+    </div>
+
+    <p class="aviso">Página de demostración no oficial</p>
+</div>
+</body>
+</html>
